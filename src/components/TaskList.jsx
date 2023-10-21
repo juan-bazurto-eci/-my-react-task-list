@@ -1,12 +1,16 @@
 import PropTypes from "prop-types";
 import Task from "./Task";
 
-const TaskList = ({ todoItems }) => {
+const TaskList = (props) => {
   return (
     <ul>
-      {todoItems.map((todo, idx) => (
-        <div key={`${todo.text}-${idx}`}>
-          <Task todo={todo} />
+      {props.taskToDo.map((todo, idx) => (
+        <div key={`${todo.description}-${idx}`}>
+          <Task
+            todo={todo}
+            deleteTasks={props.deleteTasks}
+            editTasks={props.editTasks}
+          />
         </div>
       ))}
     </ul>
@@ -14,7 +18,9 @@ const TaskList = ({ todoItems }) => {
 };
 
 TaskList.propTypes = {
-  todoItems: PropTypes.array,
+  taskToDo: PropTypes.array,
+  deleteTasks: PropTypes.func,
+  editTasks: PropTypes.func,
 };
 
 export default TaskList;

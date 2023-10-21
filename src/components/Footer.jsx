@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 
-const Footer = ({ todoItems, saveTask }) => {
+const Footer = ({ taskToDo, saveTask }) => {
   let pendingTask = 0;
 
-  todoItems.forEach((objeto) => {
+  taskToDo.forEach((objeto) => {
     if (objeto.state === false) {
       pendingTask++;
     }
@@ -24,7 +24,7 @@ const Footer = ({ todoItems, saveTask }) => {
 };
 
 Footer.propTypes = {
-  todoItems: PropTypes.array,
+  taskToDo: PropTypes.array,
   saveTask: PropTypes.func,
 };
 

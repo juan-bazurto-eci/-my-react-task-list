@@ -1,13 +1,13 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-const AddTask = ({ todoItems, saveTask }) => {
+const AddTask = ({ taskToDo, saveTask }) => {
   const [newTaskValue, setNewTaskValue] = useState("");
   const handleNewTaskValue = (event) => {
     setNewTaskValue(event.target.value);
   };
   const handleAddNewTask = () => {
-    saveTask([{ text: newTaskValue, state: false }, ...todoItems]);
+    saveTask([{ description: newTaskValue, state: false }, ...taskToDo]);
     setNewTaskValue("");
   };
   return (
@@ -19,7 +19,7 @@ const AddTask = ({ todoItems, saveTask }) => {
 };
 
 AddTask.propTypes = {
-  todoItems: PropTypes.array,
+  taskToDo: PropTypes.array,
   saveTask: PropTypes.func,
 };
 
