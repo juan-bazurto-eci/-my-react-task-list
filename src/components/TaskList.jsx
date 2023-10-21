@@ -4,8 +4,8 @@ import Task from "./Task";
 const TaskList = ({ todoItems }) => {
   return (
     <ul>
-      {todoItems.map((todo) => (
-        <div key={todo.text}>
+      {todoItems.map((todo, idx) => (
+        <div key={`${todo.text}-${idx}`}>
           <Task todo={todo} />
         </div>
       ))}
