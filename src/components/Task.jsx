@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
+import "./Task.css";
 
 const Task = ({ todo, deleteTasks, editTasks }) => {
   return (
-    <div>
+    <div className="task">
       <input
         type="checkbox"
         checked={todo.state}

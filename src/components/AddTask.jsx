@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
+import "./AddTask.css";
 
 const AddTask = ({ taskToDo, saveTask }) => {
   const [openModal, setOpenModal] = useState(false);
@@ -68,8 +69,8 @@ const AddTask = ({ taskToDo, saveTask }) => {
               }
             />
           </div>
-          <button onClick={() => setOpenModal(false)}>Close</button>
           <button>Send</button>
+          <button onClick={() => setOpenModal(false)}>Close</button>
         </form>
       )}
     </div>

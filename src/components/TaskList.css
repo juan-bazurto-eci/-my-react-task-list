@@ -1,0 +1,14 @@
+/* Estilos para el contenedor de la lista de tareas */
+.task-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Estilos para cada tarea en la lista */
+  .task-list-item {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  

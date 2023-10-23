@@ -1,0 +1,70 @@
+/* Estilos para el botón de adición */
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  /* Estilos para el modal */
+  form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  /* Estilos para etiquetas de input y campos de entrada */
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+  
+  /* Estilos para los mensajes de error */
+  span {
+    color: red;
+  }
+  
+  /* Estilos para los botones */
+  button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  button:last-child {
+    background-color: #ccc;
+  }
+  
+  /* Estilos para el botón de adición dentro del formulario */
+  button[type="button"] {
+    background-color: #ccc;
+  }
+  
+  /* Estilos para el botón de envío dentro del formulario */
+  button[type="submit"] {
+    background-color: #007BFF;
+  }
+  

@@ -1,0 +1,50 @@
+/* Estilos globales para la aplicación */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .app-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilos globales para elementos de bloque */
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+  
+  /* Estilos para enlaces */
+  a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  a:hover {
+    color: #0056b3;
+  }
+  
+  /* Estilos para botones */
+  button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px; /* Ajusta el tamaño del padding según tu preferencia */
+    cursor: pointer;
+    font-size: 14px; /* Ajusta el tamaño de fuente deseado */
+    text-align: center; /* Centra el texto horizontalmente */
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  

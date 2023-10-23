@@ -1,0 +1,45 @@
+/* Estilos para el contenedor de tarea */
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para el checkbox */
+  .task input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  /* Estilos para el título de la tarea */
+  .task h3 {
+    font-size: 18px;
+    margin: 0;
+    padding: 5px 0;
+  }
+  
+  /* Estilos para la descripción de la tarea */
+  .task p {
+    font-size: 14px;
+    margin: 0;
+    padding: 5px 0;
+  }
+  
+  /* Estilos para el botón de borrar */
+  .task button {
+    background-color: #ff5555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .task button:hover {
+    background-color: #ff0000;
+  }
+  

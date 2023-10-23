@@ -1,0 +1,32 @@
+/* Estilos para el contenedor del pie de página */
+.footer {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Estilos para el mensaje de tareas pendientes */
+  .task-count {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  /* Estilos para el botón "Clear All" */
+  .clear-button {
+    background-color: #fff;
+    color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .clear-button:hover {
+    background-color: #007BFF;
+    color: #fff;
+  }
+  
