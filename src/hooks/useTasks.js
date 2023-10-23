@@ -19,6 +19,7 @@ export function useTasks() {
     );
     const newTasksToDo = taskToDo;
     newTasksToDo[indexOfTask].name = newText;
+    newTasksToDo[indexOfTask].state = true;
     saveTask([...newTasksToDo]);
   };
   //Simulating a api function
