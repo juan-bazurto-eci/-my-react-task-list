@@ -1,23 +1,42 @@
-import { useTasks } from "./hooks/useTasks";
-import Header from "./components/Header";
-import TaskList from "./components/TaskList";
-import AddTask from "./components/AddTask";
-import Footer from "./components/Footer";
-import "./App.css";
+import { lazy, Suspense } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Menu } from "./components/Menu";
+const Home = lazy(() => import("./pages/Home"));
+const Tasks = lazy(() => import("./pages/Tasks"));
+const AboutUs = lazy(() => import("./pages/AboutUs"));
 
 function App() {
-  const { taskToDo, saveTask, deleteTasks, editTasks } = useTasks();
-
   return (
-    <div className="app-container">
-      <Header />
-      <AddTask taskToDo={taskToDo} saveTask={saveTask} />
-      <TaskList
-        taskToDo={taskToDo}
-        deleteTasks={deleteTasks}
-        editTasks={editTasks}
-      />
-      <Footer taskToDo={taskToDo} saveTask={saveTask} />
+    <div className="App">
+      <BrowserRouter>
+        <Menu />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Suspense fallback="loading ...">
+                <Home />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/Tasks"
+            element={
+              <Suspense fallback="loading ...">
+                <Tasks />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/AboutUs"
+            element={
+              <Suspense fallback="loading ...">
+                <AboutUs />
+              </Suspense>
+            }
+          />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
