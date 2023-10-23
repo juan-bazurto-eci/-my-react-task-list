@@ -8,7 +8,10 @@ const Task = ({ todo, deleteTasks, editTasks }) => {
         checked={todo.state}
         onChange={() => editTasks(todo, "Finalizada")}
       />
-      {todo.description}
+      <div>
+        <h3>{todo.name}</h3>
+        <p>{todo.description}</p>
+      </div>
       <div>
         <button onClick={() => deleteTasks(todo)}>Borrar</button>
       </div>

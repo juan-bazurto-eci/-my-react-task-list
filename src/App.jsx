@@ -1,4 +1,4 @@
-import { useTasks } from "./hooks/useTask";
+import { useTasks } from "./hooks/useTasks";
 import Header from "./components/Header";
 import TaskList from "./components/TaskList";
 import AddTask from "./components/AddTask";

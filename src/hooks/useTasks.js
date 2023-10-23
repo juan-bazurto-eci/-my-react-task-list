@@ -2,28 +2,25 @@ import { useState, useEffect } from "react";
 
 export function useTasks() {
   const [taskToDo, setTaskToDo] = useState([]);
-
   const saveTask = (newTasks) => {
     localStorage.setItem("TaskToDo", JSON.stringify(newTasks));
     setTaskToDo(newTasks);
   };
   const deleteTasks = (taskToDelete) => {
     const newTasksToDo = taskToDo.filter(
-      (task) => task.description !== taskToDelete.description
+      (task) => task.name !== taskToDelete.name
     );
     saveTask(newTasksToDo);
   };
 
   const editTasks = (taskToEdit, newText) => {
     const indexOfTask = taskToDo.findIndex(
-      (task) => task.description === taskToEdit.description
+      (task) => task.name === taskToEdit.name
     );
     const newTasksToDo = taskToDo;
-    newTasksToDo[indexOfTask].description = newText;
-    newTasksToDo[indexOfTask].state = true;
+    newTasksToDo[indexOfTask].name = newText;
     saveTask([...newTasksToDo]);
   };
-
   //Simulating a api function
   useEffect(() => {
     setTimeout(() => {
