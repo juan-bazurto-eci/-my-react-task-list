@@ -1,10 +1,13 @@
+import { Box, Heading } from "@chakra-ui/react";
 import "./Header.css";
 
 const Header = () => {
   return (
-    <header>
-      <h1>Todo App</h1>
-    </header>
+    <Box as="header" p="4">
+      <Heading as="h1" size="xl">
+        Todo App
+      </Heading>
+    </Box>
   );
 };
 

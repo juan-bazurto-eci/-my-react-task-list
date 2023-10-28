@@ -1,20 +1,26 @@
 import PropTypes from "prop-types";
 import Task from "./Task";
-import "./TaskList.css"; // Asegúrate de que la ruta sea correcta
+import { Box, UnorderedList, ListItem } from "@chakra-ui/react";
+import "./TaskList.css";
 
 const TaskList = (props) => {
   return (
-    <ul className="task-list">
-      {props.taskToDo.map((todo, idx) => (
-        <div key={`${todo.description}-${idx}`} className="task-list-item">
-          <Task
-            todo={todo}
-            deleteTasks={props.deleteTasks}
-            editTasks={props.editTasks}
-          />
-        </div>
-      ))}
-    </ul>
+    <Box p="4">
+      <UnorderedList listStyleType="none" className="task-list">
+        {props.taskToDo.map((todo, idx) => (
+          <ListItem
+            key={`${todo.description}-${idx}`}
+            className="task-list-item"
+          >
+            <Task
+              todo={todo}
+              deleteTasks={props.deleteTasks}
+              editTasks={props.editTasks}
+            />
+          </ListItem>
+        ))}
+      </UnorderedList>
+    </Box>
   );
 };
 

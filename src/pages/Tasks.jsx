@@ -1,3 +1,4 @@
+import { Container } from "@chakra-ui/react";
 import { useTasks } from "../hooks/useTasks";
 import Header from "../components/Header";
 import TaskList from "../components/TaskList";
@@ -9,7 +10,7 @@ function Tasks() {
   const { taskToDo, saveTask, deleteTasks, editTasks } = useTasks();
 
   return (
-    <div className="app-container">
+    <Container maxW="xl" p="4">
       <Header />
       <AddTask taskToDo={taskToDo} saveTask={saveTask} />
       <TaskList
@@ -18,7 +19,7 @@ function Tasks() {
         editTasks={editTasks}
       />
       <Footer taskToDo={taskToDo} saveTask={saveTask} />
-    </div>
+    </Container>
   );
 }
 

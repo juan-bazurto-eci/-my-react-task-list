@@ -1,19 +1,24 @@
+import { Box, Heading, Text, UnorderedList, ListItem } from "@chakra-ui/react";
 import "./AboutUs.css";
 
 export default function AboutUs() {
   return (
-    <div className="about-us-container">
-      <h1 className="about-us-title">Task Manager</h1>
-      <h3 className="about-us-description">
+    <Box className="about-us-container" p="4">
+      <Heading className="about-us-title" size="xl">
+        Task Manager
+      </Heading>
+      <Text className="about-us-description">
         Organize your life with our Task Manager application! With intuitive
-        features, such as the ability to add, edit and delete tasks, and an
-        easy-to-use interface, it´s never been easier to keep your to-dos under
+        features, such as the ability to add, edit, and delete tasks, and an
+        easy-to-use interface, its never been easier to keep your to-dos under
         control.
-      </h3>
-      <h2 className="tech-stack-title">Technology Stack</h2>
-      <ul className="tech-stack-list">
-        <li>React JS</li>
-      </ul>
-    </div>
+      </Text>
+      <Heading className="tech-stack-title" size="lg" mt="4">
+        Technology Stack
+      </Heading>
+      <UnorderedList className="tech-stack-list" mt="2" pl="4">
+        <ListItem>React JS</ListItem>
+      </UnorderedList>
+    </Box>
   );
 }

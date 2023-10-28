@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Box, Text, Button } from "@chakra-ui/react";
 import "./Footer.css"; // Asegúrate de que la ruta sea correcta
 
 const Footer = ({ taskToDo, saveTask }) => {
@@ -11,19 +12,16 @@ const Footer = ({ taskToDo, saveTask }) => {
   });
 
   return (
-    <div className="footer">
-      <span className="task-count">{`You have ${pendingTask} pending task`}</span>
+    <Box as="div" className="footer" p="4">
+      <Text className="task-count">{`You have ${pendingTask} pending task${
+        pendingTask === 1 ? "" : "s"
+      }`}</Text>
       {taskToDo?.length > 0 ? (
-        <button
-          className="clear-button"
-          onClick={() => {
-            saveTask([]);
-          }}
-        >
+        <Button colorScheme="red" onClick={() => saveTask([])}>
           Clear All
-        </button>
+        </Button>
       ) : null}
-    </div>
+    </Box>
   );
 };
 

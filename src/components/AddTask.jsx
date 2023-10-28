@@ -1,19 +1,34 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
+import {
+  Button,
+  Input,
+  FormControl,
+  FormLabel,
+  Text,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+} from "@chakra-ui/react";
 import "./AddTask.css";
 
 const AddTask = ({ taskToDo, saveTask }) => {
   const [openModal, setOpenModal] = useState(false);
   const [formData, setFormData] = useState({ name: "", description: "" });
   const [formError, setFormError] = useState({ name: "", description: "" });
+
   const handleAddNewTask = (event) => {
     event.preventDefault();
     if (!formData.name) {
-      setFormError({ ...formError, name: "name is required" });
-    } else if (formData.name < 4) {
+      setFormError({ ...formError, name: "Name is required" });
+    } else if (formData.name.length < 4) {
       setFormError({
         ...formError,
-        name: "name must be have more than 3 characters",
+        name: "Name must have more than 3 characters",
       });
     } else {
       setFormError({ ...formError, name: "" });
@@ -29,13 +44,14 @@ const AddTask = ({ taskToDo, saveTask }) => {
       setOpenModal(false);
     }
   };
+
   const handleSetNameTask = (event) => {
     if (!event.target.value) {
-      setFormError({ ...formError, name: "name is required" });
+      setFormError({ ...formError, name: "Name is required" });
     } else if (event.target.value.length < 4) {
       setFormError({
         ...formError,
-        name: "name must be have more than 3 characters",
+        name: "Name must have more than 3 characters",
       });
     } else {
       setFormError({ ...formError, name: "" });
@@ -45,34 +61,38 @@ const AddTask = ({ taskToDo, saveTask }) => {
 
   return (
     <div>
-      <button
-        onClick={() => {
-          setOpenModal(true);
-        }}
-      >
-        +
-      </button>
-      {openModal && (
-        <form onSubmit={handleAddNewTask}>
-          <div>
-            <label>Name of Taks </label>
-            <input onChange={handleSetNameTask} />
-            {formError.name && (
-              <span style={{ color: "red" }}>{formError.name}</span>
-            )}
-          </div>
-          <div>
-            <label>description </label>
-            <input
-              onChange={(event) =>
-                setFormData({ ...formData, description: event.target.value })
-              }
-            />
-          </div>
-          <button>Send</button>
-          <button onClick={() => setOpenModal(false)}>Close</button>
-        </form>
-      )}
+      <Button onClick={() => setOpenModal(true)}>+</Button>
+      <Modal isOpen={openModal} onClose={() => setOpenModal(false)}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Add New Task</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <FormControl>
+              <FormLabel>Name of Task</FormLabel>
+              <Input onChange={handleSetNameTask} value={formData.name} />
+              {formError.name && <Text color="red">{formError.name}</Text>}
+            </FormControl>
+            <FormControl mt="4">
+              <FormLabel>Description</FormLabel>
+              <Input
+                onChange={(event) =>
+                  setFormData({ ...formData, description: event.target.value })
+                }
+                value={formData.description}
+              />
+            </FormControl>
+          </ModalBody>
+          <ModalFooter>
+            <Button colorScheme="blue" onClick={handleAddNewTask}>
+              Save
+            </Button>
+            <Button colorScheme="red" onClick={() => setOpenModal(false)}>
+              Close
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </div>
   );
 };

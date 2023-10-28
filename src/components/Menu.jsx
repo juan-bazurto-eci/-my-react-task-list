@@ -1,34 +1,42 @@
+import { Box, Link, Text } from "@chakra-ui/react";
+import { NavLink } from "react-router-dom";
 import "./Menu.css";
-import { Link } from "react-router-dom";
 
 export function Menu() {
   return (
-    <nav className="menu-container">
-      <ul className="menu-list">
-        <li className="menu-item">
-          <Link to="/" className="menu-link" activeClassName="menu-link-active">
-            Home
-          </Link>
-        </li>
-        <li className="menu-item">
+    <Box as="nav" className="menu-container" p="4">
+      <Box as="ul" className="menu-list" listStyleType="none" display="flex">
+        <Box as="li" className="menu-item" mr="4">
           <Link
+            as={NavLink}
+            to="/"
+            className="menu-link"
+            activeClassName="menu-link-active"
+          >
+            <Text fontSize="lg">Home</Text>
+          </Link>
+        </Box>
+        <Box as="li" className="menu-item" mr="4">
+          <Link
+            as={NavLink}
             to="/Tasks"
             className="menu-link"
             activeClassName="menu-link-active"
           >
-            Tareas
+            <Text fontSize="lg">Tareas</Text>
           </Link>
-        </li>
-        <li className="menu-item">
+        </Box>
+        <Box as="li" className="menu-item">
           <Link
+            as={NavLink}
             to="/AboutUs"
             className="menu-link"
             activeClassName="menu-link-active"
           >
-            About Us
+            <Text fontSize="lg">About Us</Text>
           </Link>
-        </li>
-      </ul>
-    </nav>
+        </Box>
+      </Box>
+    </Box>
   );
 }
