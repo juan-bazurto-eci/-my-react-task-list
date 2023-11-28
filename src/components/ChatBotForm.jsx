@@ -26,6 +26,17 @@ const ChatBotForm = ({ onSubmit }) => {
     setAnswers({ ...answers, [name]: value });
   };
 
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault(); // Prevenir la acción por defecto del form
+      if (currentStep < 15) {
+        nextStep();
+      } else {
+        handleSubmit(event);
+      }
+    }
+  };
+
   const handleCheckboxChange = (event) => {
     const { name, value } = event.target;
     let newValues = answers[name];
@@ -53,6 +64,7 @@ const ChatBotForm = ({ onSubmit }) => {
             <label htmlFor="nombre">Nombre:</label>
             <input
               type="text"
+              onKeyPress={handleKeyPress}
               id="nombre"
               name="nombre"
               value={answers.nombre}
@@ -327,6 +339,7 @@ const ChatBotForm = ({ onSubmit }) => {
               </label>
               <input
                 type="text"
+                onKeyPress={handleKeyPress}
                 placeholder="Otros (especifique)"
                 name="otrosSintomas"
                 onChange={handleInputChange}
@@ -724,6 +737,7 @@ const ChatBotForm = ({ onSubmit }) => {
               </label>
               <input
                 type="text"
+                onKeyPress={handleKeyPress}
                 placeholder="Otro (especifique)"
                 name="otrosObjetivos"
                 onChange={handleInputChange}
