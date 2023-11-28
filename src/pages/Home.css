@@ -1,17 +1,19 @@
 .container {
-    text-align: center;
-    background-color: #f0f0f0;
-    padding: 20px;
-  }
-  
-  .title {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .subtitle {
-    font-size: 20px;
-    color: #666;
-  }
-  
+  text-align: center;
+  background-color: #f0f8ff; /* Un tono claro de azul para combinar con el chatbot */
+  padding: 20px;
+  border-radius: 8px; /* Bordes redondeados para un aspecto moderno */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera para profundidad */
+}
+
+.title {
+  font-size: 36px;
+  color: #007BFF; /* Azul que coincide con el menú y el chatbot */
+  margin-bottom: 15px; /* Espaciado adicional para una mejor separación */
+  font-weight: bold; /* Negrita para destacar */
+}
+
+.subtitle {
+  font-size: 20px;
+  line-height: 1.5; /* Espaciado de línea para una lectura más cómoda */
+}

@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <Box as="header" p="4">
       <Heading as="h1" size="xl">
-        Todo App
+        ChatBot
       </Heading>
     </Box>
   );

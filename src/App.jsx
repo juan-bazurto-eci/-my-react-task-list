@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Menu } from "./components/Menu";
 import { Box, ChakraProvider, CSSReset } from "@chakra-ui/react";
 const Home = lazy(() => import("./pages/Home"));
-const Tasks = lazy(() => import("./pages/Tasks"));
+const ChatBot = lazy(() => import("./pages/ChatBot"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
 
 function App() {
@@ -23,10 +23,10 @@ function App() {
               }
             />
             <Route
-              path="/Tasks"
+              path="/ChatBot"
               element={
                 <Suspense fallback="Loading...">
-                  <Tasks />
+                  <ChatBot />
                 </Suspense>
               }
             />

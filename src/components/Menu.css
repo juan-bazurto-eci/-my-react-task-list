@@ -1,32 +1,36 @@
 .menu-container {
-    background-color: #333;
-    padding: 10px;
-  }
-  
-  .menu-list {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .menu-item {
-    margin: 0 10px;
-  }
-  
-  .menu-link {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    transition: color 0.2s;
-  }
-  
-  .menu-link:hover {
-    color: #00aaff;
-  }
-  
-  .menu-link-active {
-    color: #00aaff;
-    font-weight: bold;
-  }
-  
+  background-color: #007BFF; /* Un azul similar al del chatbot */
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Agrega una sombra para un aspecto elevado */
+}
+
+.menu-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-item {
+  margin: 0 15px; /* Espaciado ligeramente mayor para una apariencia más abierta */
+  color: #fff;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.2s, transform 0.2s; /* Agrega transformación para un efecto de hover sutil */
+}
+
+.menu-link:hover, .menu-link-active {
+  color: #f0f8ff; /* Un azul claro para el hover y el activo */
+  transform: scale(1.1); /* Escala ligeramente en hover para un efecto interactivo */
+}
+
+.menu-link-active {
+  font-weight: bold;
+  text-decoration: underline; /* Subrayado para resaltar el enlace activo */
+}

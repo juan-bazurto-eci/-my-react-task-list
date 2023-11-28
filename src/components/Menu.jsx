@@ -13,17 +13,17 @@ export function Menu() {
             className="menu-link"
             activeClassName="menu-link-active"
           >
-            <Text fontSize="lg">Home</Text>
+            <Text fontSize="lg">Inicio</Text>
           </Link>
         </Box>
         <Box as="li" className="menu-item" mr="4">
           <Link
             as={NavLink}
-            to="/Tasks"
+            to="/ChatBot"
             className="menu-link"
             activeClassName="menu-link-active"
           >
-            <Text fontSize="lg">Tareas</Text>
+            <Text fontSize="lg">Chat Ansiedad</Text>
           </Link>
         </Box>
         <Box as="li" className="menu-item">
@@ -33,7 +33,7 @@ export function Menu() {
             className="menu-link"
             activeClassName="menu-link-active"
           >
-            <Text fontSize="lg">About Us</Text>
+            <Text fontSize="lg">Sobre nosotros</Text>
           </Link>
         </Box>
       </Box>

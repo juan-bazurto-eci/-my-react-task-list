@@ -1,35 +1,38 @@
 .about-us-container {
-    text-align: center;
-    background-color: #f0f0f0;
-    padding: 20px;
-  }
-  
-  .about-us-title {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .about-us-description {
-    font-size: 18px;
-    color: #666;
-    line-height: 1.5;
-  }
-  
-  .tech-stack-title {
-    font-size: 24px;
-    color: #333;
-    margin-top: 20px;
-  }
-  
-  .tech-stack-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .tech-stack-list li {
-    font-size: 16px;
-    color: #666;
-    margin-top: 10px;
-  }
-  
+  text-align: center;
+  background-color: #f0f8ff; /* Un tono claro de azul */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-title {
+  font-size: 36px;
+  color: #007BFF; /* Azul oscuro para el título */
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.about-us-description {
+  font-size: 18px;
+  color: #333; /* Un color oscuro para el texto */
+  line-height: 1.5;
+}
+
+.tech-stack-title {
+  font-size: 24px;
+  color: #007BFF; /* Manteniendo el mismo azul para los subtítulos */
+  margin-top: 20px;
+}
+
+.tech-stack-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: left; /* Alineación a la izquierda para la lista */
+}
+
+.tech-stack-list li {
+  font-size: 16px;
+  color: #333; /* Color oscuro para los elementos de la lista */
+  margin-top: 10px;
+}
